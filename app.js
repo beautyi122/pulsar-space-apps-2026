@@ -115,23 +115,28 @@
   byId('csvRun').addEventListener('click',async ()=>{
     const input=byId('csvFile'),panel=byId('csvResponse');panel.hidden=false;
     if(!input.files.length){panel.textContent='Choose a local sensor CSV file or download the synthetic example first.';return;}
-    panel.textContent='Analyzing the provided local sensor window…';
+    panel.textContent='Processing the sensor-only window in your browser…';
     try{
+      if(!window.PulsarBrowserSignal)throw Error('Local signal analysis module did not load');
       const content=await input.files[0].text();
-      if(content.length>2000000)throw Error('File exceeds 2 MB');
-      const res=await fetch('/api/analyze?activity='+encodeURIComponent(byId('csvActivity').value),{method:'POST',headers:{'Content-Type':'text/csv'},body:content});
-      let obj=await res.json();
-      if(!res.ok)throw Error(obj.error||'Local analyzer failed');
+      // Allow painting before CPU-bound 5-fold reference regression.
+      await new Promise(resolve=>setTimeout(resolve,15));
+      const obj=window.PulsarBrowserSignal.analyzeCSV(content);
       panel.textContent=[
-        'NEW RECORDING · EXPERIMENTAL ONLY',
-        'Raw spectral candidate: '+format(obj.raw_candidate_bpm,2)+' bpm',
-        'Separated spectral candidate: '+format(obj.motion_separated_candidate_bpm,2)+' bpm',
-        'Motion predictability R²: '+format(obj.motion_prediction_out_of_fold_r2,3),
-        'Uncalibrated reliability risk score: '+format(obj.development_model_uncalibrated_risk_score,3),
-        'Research tier: '+obj.research_tier.replaceAll('_',' '),
-        '',obj.caution
+        'NEW RECORDING · IN-BROWSER RESEARCH ANALYSIS',
+        'Raw dominant frequency: '+format(obj.raw_candidate_bpm,2)+' cycles/min',
+        'Motion-separated frequency: '+format(obj.motion_separated_candidate_bpm,2)+' cycles/min',
+        'Motion predictability R² (held-out time blocks): '+format(obj.motion_prediction_out_of_fold_r2,3),
+        'Separated frequency temporally stable (descriptive): '+(obj.residual_stable_descriptive?'Yes':'No'),
+        'Decision: WITHHELD / NOT A VERIFIED HEART RATE',
+        'Top-five raw frequencies: '+obj.raw_top_five.map(p=>p.bpm).join(', '),
+        'Top-five separated frequencies: '+obj.separated_top_five.map(p=>p.bpm).join(', '),
+        '', 'Sensor inputs stay in this browser; no server upload.',
+        'Method: '+obj.algorithm,
+        'Unlike the local Python service, this browser method does not run the trained error-risk classifier.',
+        '', obj.caution
       ].join('\n');
-    }catch(err){panel.textContent='Local analysis unavailable: '+err.message+'\nRun the bundled Launch.py server; opening index.html directly supports research replay but not new CSV analysis.';}
+    }catch(err){panel.textContent='Cannot analyze this sensor window: '+err.message+'\nCheck that it has 5,120 synchronized samples at 256 Hz.';}
   });
   function summaries(){
     const cats=[
