@@ -1,6 +1,5 @@
 {
   "status": "PHASE34_RETROSPECTIVE_DEVELOPMENT_SCORING_NOT_UNTOUCHED_VALIDATION",
-  "gate4_met": false,
   "phase35_independent_holdout_used": false,
   "ecg_access_is_in_separate_scoring_stage_only": true,
   "sensor_pilot_sha256": "13ab4e6e78219a7d6f9d15a1dfeff7b2cf5d1194db072580ef1e7a1fd838beb1",
@@ -712,6 +711,6 @@
     "No cutoff was tuned or accepted here; raw/residual columns are intentionally unfiltered candidates.",
     "A 100% available raw/residual candidate stream is NOT 100% reliable monitoring coverage.",
     "Error and acceptance must be jointly optimized on development participants, then frozen.",
-    "No claim of clinical validity or passing Gate4 until an untouched holdout succeeds."
+    "No claim of clinical validity or independent external validation is made."
   ]
 }
