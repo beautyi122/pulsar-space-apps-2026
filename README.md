@@ -42,4 +42,16 @@ The [NASA Human Research Program Five Hazards](https://www.nasa.gov/hrp/hazards/
 
 ### Submission integrity
 
-No independent final holdout. No live astronaut data. No medical efficacy claim. All synthetic data explicitly identified. Published methodology and results preserve research provenance. **The entrant must complete the official required AI-use/tool disclosure and confirm hackathon timing and team/event eligibility.** This repository does not imply NASA endorsement.
+No independent final holdout. No live astronaut data. No medical efficacy claim. All synthetic data explicitly identified. Published methodology and results preserve research provenance. This repository does not imply NASA endorsement.
+
+**Disclosure**
+
+[Insert your disclosure here.]
+
+**Project development history**
+
+[Insert accurate project provenance and any earlier work used here.]
+
+**Licensing and rights**
+
+[Insert your reviewed licensing and rights statement here. Third-party source attributions remain in `science/Attributions.md`.]
