@@ -1,57 +1,79 @@
-# Pulsar — Motion-aware Astronaut Health Intelligence
+# Pulsar — Motion-Aware Astronaut Health Intelligence
 
-**Team:** Stella Nova · **NASA Space Apps Challenge 2026** · **Challenge:** Create Health Monitoring Software for Astronauts on Space Missions
+**Team:** Stella Nova · **NASA Space Apps Challenge 2026**  
+**Challenge:** [Create Health Monitoring Software for Astronauts on Space Missions](https://www.spaceappschallenge.org/2026/challenges/health-monitoring-software/)
 
-## Open the live research demonstrator
+**[Explore the live Pulsar website](https://beautyi122.github.io/pulsar-space-apps-2026/)**
 
-[Public website](https://beautyi122.github.io/pulsar-space-apps-2026/) · [Official challenge](https://www.spaceappschallenge.org/2026/challenges/health-monitoring-software/)
+## Why Pulsar?
 
-**Pulsar's research question:** When wrist motion makes an optical heart-rate signal look convincingly wrong, can an algorithm recover alternative candidates and decide when to withhold a doubtful measurement?
+During movement, a wrist optical pulse sensor can mistake motion-related patterns for a heartbeat. A convincing-looking number is not necessarily a dependable measurement.
 
-This is a **finished interactive research demonstration with exploratory sensor analysis**, not a clinically validated health device. The public interface runs on static GitHub Pages, and the uploaded 20-second CSV is processed completely inside the browser. It does not run the Python trained risk classifier; the browser tool's outputs are unverified frequency candidates.
+Pulsar explores how motion-aware signal processing and measurement-reliability assessment can help a crew member interpret uncertain wrist-sensor readings. It combines scientific analysis with an interactive astronaut-health application that brings the evidence, uncertainty and crew self-assessment into one place.
 
-### Inspect and reproduce the science
+## What the application offers
 
-- [Scientific methods, metrics, splits and limitations](science/METHODS.md)
-- [Exact NASA challenge-resource integration](science/NASA%20RESOURCES.md)
-- [Python reference implementation](science/research/)
-- [Frozen scientific results](science/results/)
-- [Development input evidence and integrity record](science/input/)
-- [Automated tests](science/tests/)
-- [Competition evidence and provenance](science/Submission%20Check.md)
+- **Interactive research replay:** Explore recorded exercise intervals, candidate pulse frequencies and measurement decisions.
+- **Motion-aware analysis:** See how synchronized optical PPG and accelerometer signals can help distinguish physiological rhythm candidates from movement-related interference.
+- **Reliability-focused reporting:** Investigate when a candidate reading is suitable to display and when a follow-up check is more appropriate.
+- **Exploratory CSV analysis:** Examine a compatible short sensor recording locally in the browser.
+- **Crew self-assessment and mission context:** Explore a review-oriented check-in alongside NASA human-research and exercise resources.
 
-The website's `data.js` is a replay of development decisions, not a live stream from spacecraft. Accuracy statistics are retrospective **participant-held-out development**, based on 332 windows from eight participants, and cannot establish clinical or astronaut performance. The new reliability architecture displayed 125 readings (37.7% coverage), 3.62 bpm conditional MAE and **8 serious errors**. Running was especially poor (2/73 displayed). The original strict scientific Gate 4 is not met.
+The interactive replay presents stored research findings. The exploratory CSV feature and the preserved Python reliability evaluation serve different purposes; the research measurements and validation methodology are documented in the scientific files below.
 
-### Run locally
+## Scientific evidence
 
-Open `index.html` in a browser for the static application and local CSV analysis. Sample input: `Synthetic PPG.csv` (a **simulated**, 5120-row 20-second synchronized PPG/accelerometer recording).
+The retrospective development study used **332 twenty-second windows** from **19 terrestrial exercise recordings across eight participants**. Among **329 windows with usable sensor candidates**, the raw strongest-peak estimate had a mean absolute error of **36.35 bpm**, compared with **21.69 bpm** for the motion-separated candidate.
 
-For the original Python reference algorithm and research tests:
+In the participant-held-out reliability evaluation, the guarded approach displayed **125 of 332 windows (37.65% coverage)**, with **3.623 bpm mean absolute error among displayed readings**. Eight displayed readings had errors of at least 15 bpm.
+
+These figures describe different evaluation subsets: conditional error among selectively displayed readings should be interpreted together with coverage, not as a direct like-for-like improvement over an unfiltered candidate stream. Activity-level results and full methodological qualifications are provided in the [scientific results](science/RESULTS.md) and [methods](science/METHODS.md).
+
+## Scientific documentation and source
+
+| Resource | Contents |
+| --- | --- |
+| [Scientific overview](science/README.md) | Research package and evidence guide |
+| [Methods](science/METHODS.md) | Signal processing, risk modelling and evaluation design |
+| [Results](science/RESULTS.md) | Quantitative comparisons and activity-level findings |
+| [Reproduction guide](science/REPRODUCE.md) | Testing and independent recalculation instructions |
+| [Research source code](science/research/) | Python analysis and evaluation implementation |
+| [Experimental inputs](science/input/) | Preserved research inputs and supporting evidence |
+| [Saved results and model](science/results/) | Evaluated outputs and model artifacts |
+| [Scientific tests](science/tests/) | Python and archived-application tests |
+| [Browser signal test](tests/browser-signal.test.js) | Sensor-input test for the archived browser implementation |
+| [Evidence verification](science/Verification.md) | Reproducibility notes and integrity checks |
+| [Release manifest](science/Release%20Manifest.json) | File sizes and SHA-256 hashes |
+| [NASA resource mapping](science/NASA%20RESOURCES.md) | Connections between NASA research and application design |
+| [Sources and attribution](science/Attributions.md) | Data origins, publications and software dependencies |
+
+The `science/app/` directory contains a preserved application snapshot for regression testing; the current public website is served from the repository-root `index.html`.
+
+## Reproduce the recorded evaluation
+
+From the repository root, with Python 3.11+ and Node.js installed where applicable:
 
 ```bash
-python3 -m venv .venv && . .venv/bin/activate
+python3 -m venv .venv
+source .venv/bin/activate
 pip install -r science/requirements.txt
 python -m unittest discover -s science/tests -v
-python science/research/AnalyzeCSV.py 'science/app/Synthetic PPG.csv' --activity walk
+node science/tests/test_app.js
 node tests/browser-signal.test.js
 ```
 
-### Space relevance and sources
+For the complete evaluation workflow and instructions that avoid overwriting the deposited results, see [REPRODUCE.md](science/REPRODUCE.md).
 
-The [NASA Human Research Program Five Hazards](https://www.nasa.gov/hrp/hazards/), [Human Spaceflight Risks](https://www.nasa.gov/hrp/risks/) and [Ongoing Research](https://www.nasa.gov/hrp/ongoing-hrp-research/) resources from the official challenge inform the application's measurement-integrity rationale and crew review workflow. See [NASA resource mapping](science/NASA%20RESOURCES.md). Additional NASA OCHMO exercise background is used as non-clinical reference context. Human PPG/ECG development evidence comes from [PhysioNet Wrist PPG During Exercise](https://physionet.org/content/wrist/1.0.0/) (ODC-By 1.0). This is not NASA astronaut data.
+A simulated 20-second synchronized PPG/accelerometer sample is provided as [Synthetic PPG.csv](Synthetic%20PPG.csv). It is demonstration data, not an astronaut recording.
 
-### Submission integrity
+## NASA relevance and research sources
 
-No independent final holdout. No live astronaut data. No medical efficacy claim. All synthetic data explicitly identified. Published methodology and results preserve research provenance. This repository does not imply NASA endorsement.
+NASA [Human Research Program hazards](https://www.nasa.gov/hrp/hazards/), [spaceflight risks](https://www.nasa.gov/hrp/risks/) and [ongoing research](https://www.nasa.gov/hrp/ongoing-hrp-research/) informed the application's mission context, focus on measurement integrity and crew review workflow. Additional NASA exercise references inform the contextual comparison in the interface.
 
-**Disclosure**
+The physiological research data come from the terrestrial [PhysioNet Wrist PPG During Exercise dataset](https://physionet.org/content/wrist/1.0.0/) rather than NASA astronaut recordings. Dataset attribution and applicable licensing information are recorded in [science/Attributions.md](science/Attributions.md).
 
-[Insert your disclosure here.]
+## Scientific scope and licensing
 
-**Project development history**
+Pulsar is a research demonstrator, not an approved clinical or flight-monitoring device. The reported results are retrospective development findings; independent testing would be required to establish performance in new populations or operational settings.
 
-[Insert accurate project provenance and any earlier work used here.]
-
-**Licensing and rights**
-
-[Insert your reviewed licensing and rights statement here. Third-party source attributions remain in `science/Attributions.md`.]
+The repository's [MIT LICENSE](LICENSE) covers original materials the Stella Nova contributors are authorized to license. Third-party data and resources retain their applicable terms. This project does not imply NASA endorsement.
