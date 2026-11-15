@@ -1,0 +1,180 @@
+/* Pulsar / Orbital Clinic — presentation layer. Scientific source code is unchanged. */
+:root {
+  color-scheme:light;
+  --bg:#f5f8f7; --ink:#18313c; --muted:#617781; --line:#d7e4e5;
+  --panel:rgba(255,255,255,.90); --panel2:#eef7f5; --cyan:#168c8a;
+  --blue:#668fab; --amber:#aa7625; --red:#b64e59; --green:#167d69;
+  --teal:#0c928c; --glass:rgba(255,255,255,.77);
+  --shadow:0 16px 46px rgba(39,84,99,.08), 0 1px 2px rgba(31,70,78,.04);
+}
+html {scroll-padding-top:110px}
+body {font-family:'Avenir Next','Nunito Sans','Segoe UI',system-ui,-apple-system,sans-serif;color:var(--ink);
+  background:radial-gradient(circle at 100% 7%,#d7f1ef 0,transparent 23%),
+  radial-gradient(circle at -9% 48%,#e0edf8 0,transparent 28%),#f5f8f7;
+  letter-spacing:-.012em;overflow-x:hidden}
+body::before {content:'';pointer-events:none;position:fixed;z-index:-1;inset:0;opacity:.19;
+  background-image:radial-gradient(#6eacaa .5px,transparent .6px);background-size:28px 28px;mask-image:linear-gradient(to bottom,transparent 10%,#000 55%,transparent 96%)}
+a {color:#087f7b;text-decoration-color:#a3c8c8}a:hover {color:#075e61;text-decoration-color:currentColor}
+a:focus-visible,button:focus-visible,input:focus-visible,select:focus-visible,summary:focus-visible {outline:3px solid #0e928b;outline-offset:4px}
+.shell {max-width:1510px}
+.topbar {position:relative;z-index:20;height:81px;border-color:#dce7e7}
+.logo {color:#103944;font-weight:850;letter-spacing:.19em;font-size:20px;display:flex;align-items:center}
+.logo i {width:31px;height:31px;border:2px solid #0e948d;background:transparent;border-radius:50%;box-shadow:none;position:relative;margin-right:13px}
+.logo i::before {content:'';position:absolute;width:43px;height:12px;border-top:2px solid #0e948d;transform:rotate(-27deg);left:-8px;top:10px}
+.logo i::after {content:'';position:absolute;width:8px;height:8px;background:#0e948d;border-radius:100%;left:21px;top:1px}
+.topmeta span {color:#728891;font-size:11px;font-weight:700;letter-spacing:.06em}
+.topmeta .outline-tag {border-color:#bddcd8;color:#0f8380!important;background:#eaf5f3}
+.nav {position:sticky;top:0;z-index:50;border:1px solid #dce9ea;background:rgba(250,253,252,.87);
+  backdrop-filter:blur(20px);-webkit-backdrop-filter:blur(20px);border-radius:18px;box-shadow:0 10px 35px rgba(23,73,85,.05);
+  margin:11px 0 27px;padding:5px;display:flex;justify-content:center;gap:5px}
+.tab {border:0;border-radius:12px;padding:12px 17px;color:#566e79;font-size:12px;letter-spacing:.005em;transition:color .25s,background .25s,transform .25s}
+.tab:hover {background:#e9f5f2;color:#0f7976;transform:translateY(-1px)}
+.tab[aria-selected='true'] {background:linear-gradient(120deg,#087973,#10a9a0);color:#fff;border:0;box-shadow:0 7px 17px #18968d36}
+section[hidden] {display:none!important}
+.eyebrow,.caps {color:#0b8884;font-weight:820;letter-spacing:.15em;font-size:10px}
+.hero {padding:50px 0 38px;grid-template-columns:1fr .8fr;gap:30px}
+.hero h1 {color:#153845;font-size:clamp(34px,4.2vw,64px);max-width:770px;font-weight:800;letter-spacing:-.065em}
+.hero h1 em {color:#008f8a}
+.hero p {color:var(--muted);font-size:16px}
+.hero-art {background:linear-gradient(125deg,#eef9fa,#d9f3f0);border-color:#c8e6e5;box-shadow:var(--shadow);height:270px}
+.ring {border-color:#2aa8a376}.ring.r2{border-color:#80b9cb77}.ring.r3{border-color:#23a89f77}
+.pulse {filter:drop-shadow(0 0 6px #21acaa3d)}.pulse path {stroke:#159f97;stroke-dasharray:580;stroke-dashoffset:580;animation:pulseDraw 4.5s cubic-bezier(.2,.6,.3,1) 1s both}
+.dot {background:#11a49e;box-shadow:0 0 23px #10a49988}.orbit-caption{color:#246f79}
+@keyframes pulseDraw {to{stroke-dashoffset:0}}
+.headerline {padding-top:16px}.headerline h2{color:#173a44;font-size:clamp(26px,3vw,40px);font-weight:820;letter-spacing:-.055em}.headerline p{color:#637e88}
+.metric,.card {border:1px solid #d8e7e6;border-radius:22px;background:linear-gradient(155deg,rgba(255,255,255,.97),rgba(248,252,251,.88));box-shadow:var(--shadow);color:var(--ink)}
+.metric {padding:22px 24px;position:relative;overflow:hidden;transition:transform .35s,box-shadow .35s}
+.metric::before {content:'';position:absolute;left:0;right:0;top:0;height:3px;background:linear-gradient(90deg,#12988c,transparent);opacity:.7}
+.metric:hover,.card:hover{box-shadow:0 20px 60px rgba(39,84,99,.11)}.metric:hover{transform:translateY(-4px)}
+.metric strong {color:#153d48;font-weight:830;font-size:clamp(25px,2.5vw,38px);letter-spacing:-.06em}
+.metric p,.card p {color:#607681}.metric p {font-size:12px}.accent{color:#078e84!important}.accent-yellow{color:#a46f1f!important}.accent-red{color:#b74e5d!important}
+.card {padding:26px;margin-bottom:21px;transition:box-shadow .3s,border-color .3s}
+.card:hover {border-color:#bbd9d8}
+.card h3{font-size:20px;color:#1a434b;letter-spacing:-.037em;font-weight:780}
+.card p,.tiny,.smallnote {color:#68808a}.status-desc{color:#37565f!important}
+.toolbar{gap:12px}.legend{color:#627e89}.swatch.raw{background:#6a8ba3}.swatch.res{background:#0b9e92}
+select {color:#203c46;background:#f8fcfa;border:1px solid #cde1e0;min-width:0;max-width:100%;box-shadow:0 1px 2px #0b3f4510}
+.formrow{color:#59737e;font-weight:650}input[type=range]{accent-color:#129b93}
+.chart text {fill:#6c8790;font-family:'Avenir Next',system-ui,sans-serif}.chart .gridline{stroke:#d7e5e9}
+.chart .rawline{stroke:#8ba7b4}.chart .resline{stroke:#0d958c;stroke-width:3}
+.chart .point{stroke:white;stroke-width:2.5}
+.value {color:#193c46;font-weight:770}.value small{color:#78909a}
+.state {background:#e6f7f0;color:#087b63;border-color:#a8d7cb}.state.review{background:#fff5e3;color:#9b6919;border-color:#ebd09c}.state.none{background:#fff0f1;color:#b04b56;border-color:#e9bec1}
+.actionbox{border-left-color:#0a9b8f;background:#ecfaf6}.actionbox.review{border-left-color:#c49231;background:#fff8eb}.actionbox.none{border-left-color:#b64e59;background:#fff0f1}
+.btn {background:linear-gradient(100deg,#087d77,#0ca6a0);color:#fff;border-radius:12px;box-shadow:0 6px 17px #149a8d2b;transition:transform .25s,filter .25s,box-shadow .25s;padding:12px 18px}
+.btn:hover{transform:translateY(-2px);filter:brightness(1.05);box-shadow:0 13px 24px #149a8d30}
+.btn.secondary{background:#ecf7f5;border:1px solid #bcded9;color:#136a6b;box-shadow:none}
+.response {background:#f0faf7;border:1px solid #cae6e2;color:#2a6161;border-radius:13px}
+.info-panel{background:linear-gradient(145deg,#f0fbf9,#e5f4f7);border:1px solid #c3e2e3;border-radius:18px;padding:23px}
+.callout{background:#fff7e9;border:1px solid #ead9ba;color:#865f1f;border-radius:14px;padding:17px}
+.pill{background:#ebf6f4;border:1px solid #b9dedb;color:#397d7b;font-size:10px;white-space:normal}
+.bartrack{background:#e7f1f0}.barfill{background:linear-gradient(90deg,#7daab9,#10998b)}.barfill.warn{background:linear-gradient(90deg,#b7bd97,#e4ad55)}
+.barrow{color:#58727c}.smallnote{font-size:12px}.sourcecard{background:#f7fbfb;border-color:#dce9e8}
+th{color:#67808c}td,th{border-color:#dfebea}.nasa-stat .metric{background:#f6fbfa}
+.pipeline .pipe,.pipe{background:#f7fbfa;border-color:#dce9e8;color:#3b5d65;border-radius:15px}
+.pipe h4,.pipe b{color:#1e6164}.pipe p{color:#657f87}
+.footer{color:#788c93;border-top:1px solid #d5e5e5;margin-top:58px;padding:26px 0 36px;gap:15px}
+.footer span{font-size:11px}
+/* Cinematic entrance */
+.launch-stage {isolation:isolate;position:relative;min-height:min(665px,76vh);border-radius:29px;overflow:hidden;display:grid;grid-template-columns:1fr .9fr;align-items:center;
+ background:#d9ebec url('https://svs.gsfc.nasa.gov/webapps/planet-pen/Images/Cupola/ISS-43_Earth_view_from_the_cupola_onboard_the_ISS.jpg') center 38%/cover no-repeat;
+ box-shadow:0 26px 90px rgba(24,69,84,.16);border:1px solid rgba(255,255,255,.9);
+ margin:13px 0 45px;padding:clamp(30px,5vw,68px);gap:22px}
+.launch-stage::before{content:'';position:absolute;inset:0;background:linear-gradient(90deg,rgba(244,251,249,.97) 0%,rgba(244,250,250,.86) 30%,rgba(242,248,246,.36) 57%,rgba(6,39,52,.12) 100%);z-index:-1}
+.launch-stage::after {content:'';pointer-events:none;position:absolute;inset:0;border:1px solid rgba(255,255,255,.7);border-radius:inherit;z-index:4}
+.launch-copy {max-width:680px;position:relative;z-index:3;animation:launchIn 1.1s both}
+.launch-kicker{font-size:11px;letter-spacing:.23em;text-transform:uppercase;font-weight:850;color:#087c79;display:flex;align-items:center;gap:13px}
+.launch-kicker::before{content:'';width:24px;height:2px;background:#0d938f}
+.launch-copy h1{font-size:clamp(65px,8vw,128px);font-weight:820;letter-spacing:-.094em;line-height:.96;margin:18px 0 13px;color:#123b46}
+.launch-copy h1 span{position:relative}.launch-copy h1 span:after{content:'';position:absolute;width:28px;height:28px;border:2px solid #0d988d;border-radius:50%;right:-26px;top:4px;opacity:.7;animation:spinOrbit 12s linear infinite}
+.launch-copy h2{font-size:clamp(23px,2.25vw,34px);max-width:540px;font-weight:750;letter-spacing:-.05em;line-height:1.15;margin:10px 0 16px;color:#154652}
+.launch-copy p{color:#41636b;font-size:clamp(13px,1.1vw,16px);max-width:520px;margin:0 0 25px;line-height:1.75}
+.launch-ctas{display:flex;gap:12px;flex-wrap:wrap}.launch-ctas button{padding:13px 20px;border-radius:12px;font-weight:750;cursor:pointer}
+.launch-ctas .primary{background:linear-gradient(115deg,#087870,#12a69b);color:#fff;border:1px solid #078b82;box-shadow:0 12px 22px #07877d37}
+.launch-ctas .secondary{background:rgba(255,255,255,.82);color:#136d6c;border:1px solid #bddbd8}
+.launch-ctas button:hover{transform:translateY(-2px);box-shadow:0 10px 20px #084f4b20}
+.launch-disclaimer{display:flex;gap:8px;align-items:center;margin-top:24px;font-size:11px;letter-spacing:.02em;color:#396773}
+.launch-disclaimer:before{content:'';width:7px;height:7px;border-radius:50%;background:#0da38e;box-shadow:0 0 0 4px #abded3}
+.launch-monitor{position:relative;z-index:3;justify-self:end;width:min(100%,440px);padding:24px 25px 21px;
+ border:1px solid rgba(255,255,255,.65);background:linear-gradient(155deg,rgba(17,56,70,.87),rgba(12,61,72,.82));
+ -webkit-backdrop-filter:blur(24px);backdrop-filter:blur(24px);box-shadow:0 30px 70px rgba(7,45,57,.25),inset 0 1px #ffffff42;
+ border-radius:25px;color:#e4fffa;transform:perspective(900px) rotateY(-7deg);transition:transform .45s}
+.launch-monitor:hover{transform:perspective(900px) rotateY(0) translateY(-6px)}
+.launch-monitor-title{display:flex;justify-content:space-between;align-items:center;gap:10px;font-size:11px;text-transform:uppercase;letter-spacing:.13em;color:#d6f6f2}
+.monitor-light{display:inline-block;width:7px;height:7px;border-radius:50%;background:#4fe9ce;margin-right:5px;box-shadow:0 0 11px #4fe9ce}
+.launch-monitor .research-note{font-size:10px;color:#b8d6de;line-height:1.5}
+.monitor-head{display:flex;align-items:center;justify-content:space-between;margin:18px 0 0;gap:14px}
+.monitor-head strong{font-size:clamp(24px,2.3vw,33px);letter-spacing:-.05em}
+.monitor-head .status{font-size:10px;border:1px solid #8bc3bf;border-radius:22px;background:#134c53;padding:6px 9px;max-width:150px;text-align:center;color:#d4faf1}
+.monitor-trace{width:100%;height:auto;margin:12px 0 5px;filter:drop-shadow(0 0 10px #68efdd35)}
+.monitor-trace path{fill:none;stroke:#5cebd8;stroke-width:2.1;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:870;animation:trace 4s linear infinite}
+@keyframes trace{to{stroke-dashoffset:-870}}
+.monitor-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:8px}.monitor-grid div{padding:10px 8px;border:1px solid #8bb9c04b;border-radius:11px;background:#ffffff12}
+.monitor-grid b{display:block;color:#d2fff6;font-size:12px}.monitor-grid span{display:block;font-size:9px;color:#b5d4db;margin-top:3px}
+.launch-scroll{position:absolute;z-index:4;bottom:24px;left:50%;transform:translateX(-50%);font-size:10px;letter-spacing:.23em;color:#496d76;text-transform:uppercase;white-space:nowrap}
+.launch-scroll:after{content:'↓';display:block;text-align:center;font-size:19px;animation:driftDown 2s ease-in-out infinite}
+@keyframes driftDown{50%{transform:translateY(7px)}}
+@keyframes launchIn {from{opacity:0;transform:translateY(25px)}to{opacity:1;transform:translateY(0)}}
+@keyframes spinOrbit{to{transform:rotate(360deg)}}
+/* Floating orbital ambient design behind content */
+.orbital-layer {position:fixed;inset:0;z-index:-1;pointer-events:none;overflow:hidden;opacity:.64}
+.orbital-sphere{position:absolute;border-radius:50%;aspect-ratio:1;transform:translate3d(0,var(--scroll-drift,0px),0);will-change:transform;box-shadow:inset -22px -18px 50px #22577d25,0 26px 65px #527a8c15}
+.orbital-sphere.a{top:48%;right:-100px;width:220px;background:radial-gradient(circle at 31% 26%,#fefefe 0,#9cbfd0 32%,#558a9c 56%,#1e5365 86%)}
+.orbital-sphere.b{top:83%;left:-75px;width:160px;background:radial-gradient(circle at 25% 20%,#fffdf5,#d6d8c3 36%,#a8c2c4 67%,#83acb1 90%)}
+.orbital-sphere.a::before,.orbital-sphere.b::before{content:'';position:absolute;border:1px solid #8eb8bc8c;border-radius:50%;width:145%;height:52%;top:22%;left:-22%;transform:rotate(-22deg)}
+.orbital-particle{position:absolute;width:3px;height:3px;background:#489a9e;box-shadow:0 0 9px #61acb0;border-radius:50%;animation:floatStar var(--period,6s) ease-in-out infinite alternate;opacity:.6}
+@keyframes floatStar {to{transform:translateY(-20px) translateX(6px);opacity:1}}
+/* Features, story and interactions */
+.clinic-feature-rail{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin:-16px 0 34px;position:relative;z-index:3}
+.clinic-feature{display:flex;align-items:center;gap:12px;padding:14px 16px;background:rgba(255,255,255,.88);border:1px solid #d7e9e7;border-radius:16px;box-shadow:var(--shadow)}
+.clinic-feature .glyph{flex:none;display:grid;place-items:center;font-size:23px;width:41px;height:41px;background:#e2f4f0;border-radius:12px;color:#0b8880}
+.clinic-feature b{display:block;font-size:12px;letter-spacing:-.015em}.clinic-feature small{display:block;font-size:10px;color:#68828b;margin-top:2px}
+.clinic-section-heading{font-size:10px;color:#0f8a84;text-transform:uppercase;letter-spacing:.19em;font-weight:850}
+.clinic-journey {position:relative;margin:16px 0 40px;border:1px solid #d8e8e7;border-radius:23px;background:linear-gradient(105deg,#fff,#ebf7f6);box-shadow:var(--shadow);padding:24px}
+.clinic-journey h2{font-size:clamp(23px,2.6vw,34px);letter-spacing:-.047em;margin:7px 0 14px}
+.journey-steps{display:grid;grid-template-columns:repeat(4,1fr);gap:10px}
+.journey-step{border:1px solid #d5e6e5;border-radius:14px;background:#fff;text-align:left;padding:13px 14px;color:#456d73;cursor:pointer;transition:all .23s}
+.journey-step strong{display:block;font-size:14px;color:#1b515a}.journey-step span{font-size:10px;color:#69838a}
+.journey-step[aria-pressed='true']{border-color:#31a99b;background:#e4f8f3;box-shadow:inset 0 0 0 1px #31a99b55;transform:translateY(-2px)}
+.journey-result{min-height:88px;margin-top:15px;padding:14px 18px;border-radius:14px;background:#f9fdfb;border:1px solid #dceae8;display:grid;grid-template-columns:48px 1fr;gap:15px;align-items:center}
+.journey-result .journey-icon{font-size:30px;color:#0a9990;font-weight:800}
+.journey-result h3{font-size:15px;margin:0 0 4px}.journey-result p{font-size:12px;margin:0;line-height:1.6;color:#5a7780}
+.clinic-compare{border:1px solid #d9e8e7;background:linear-gradient(135deg,#fff,#f1fbf9);border-radius:24px;padding:25px;margin:10px 0 38px;box-shadow:var(--shadow)}
+.clinic-compare-header{display:flex;gap:18px;justify-content:space-between;align-items:end;flex-wrap:wrap}
+.clinic-compare h2{margin:6px 0 7px;font-size:clamp(23px,2.4vw,31px);letter-spacing:-.045em}.clinic-compare p{margin:0;color:#65818a;font-size:12px;max-width:720px}
+.compare-stage{position:relative;height:240px;margin-top:18px;border-radius:16px;overflow:hidden;border:1px solid #cfe5e3;background:repeating-linear-gradient(0deg,transparent,transparent 38px,#e8f2f3 39px),linear-gradient(90deg,#f4f8fd,#effaf7)}
+.compare-stage svg{position:absolute;inset:0;width:100%;height:100%;display:block}
+.compare-stage .raw-path{fill:none;stroke:#7c9eae;stroke-width:2.6;stroke-linejoin:round}.compare-stage .sep-path{fill:none;stroke:#07a094;stroke-width:3.2;stroke-linejoin:round}
+.compare-overlay{position:absolute;inset:0;clip-path:inset(0 50% 0 0);background:repeating-linear-gradient(0deg,transparent,transparent 38px,#e6f3ef 39px),#effaf7}
+.compare-divider{position:absolute;top:0;bottom:0;left:50%;width:2px;background:#0b8f86;pointer-events:none}.compare-divider:after{content:'↔';position:absolute;left:-18px;top:50%;border-radius:50%;height:36px;width:36px;display:grid;place-items:center;background:#0c9188;color:white;box-shadow:0 4px 15px #0b85864d}
+.compare-label{position:absolute;top:13px;z-index:2;font-size:10px;letter-spacing:.08em;font-weight:800;background:#ffffffd9;padding:6px 10px;border-radius:9px}.compare-label.left{left:12px;color:#087f78}.compare-label.right{right:12px;color:#5e7c89}
+.compare-slider{width:100%;accent-color:#0d9a90;margin:17px 0 8px}.compare-caption{display:flex;gap:12px;justify-content:space-between;color:#657f88;font-size:11px}
+.clinic-card-mark{display:inline-flex;align-items:center;gap:7px;padding:5px 11px;border-radius:20px;background:#e6f6f2;color:#158a82;font-size:10px;font-weight:850;letter-spacing:.09em}
+.clinic-astronaut{display:grid;grid-template-columns:minmax(190px,.46fr) 1fr;border:1px solid #d0e3e4;min-height:250px;overflow:hidden;border-radius:23px;background:linear-gradient(130deg,#dceff3,#fff);margin:20px 0 32px;box-shadow:var(--shadow)}
+.clinic-astronaut .portrait{background:linear-gradient(transparent,#092c3a22),url('https://svs.gsfc.nasa.gov/webapps/planet-pen/Images/Cupola/STS-130_EVA3_Nicholas_Patrick_1.jpg') center 34%/cover no-repeat;min-height:250px;position:relative}
+.clinic-astronaut .portrait:after{content:'';position:absolute;inset:0;background:linear-gradient(90deg,transparent 75%,#eaf4f5 100%)}
+.clinic-astronaut .story{padding:clamp(23px,3vw,42px);align-self:center}.clinic-astronaut h2{font-size:clamp(24px,3vw,38px);line-height:1.12;letter-spacing:-.055em;margin:10px 0}.clinic-astronaut p{color:#607d85;font-size:13px;max-width:700px}
+.clinic-astronaut button{border:1px solid #0d918a;background:#0c8f86;color:#fff;border-radius:11px;padding:11px 15px;margin-top:8px;font-weight:750}
+.clinic-evidence {display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin:10px 0 28px}
+.clinic-evidence details{background:#fff;border:1px solid #d5e7e5;border-radius:17px;box-shadow:var(--shadow);padding:18px;align-self:start}
+.clinic-evidence summary{cursor:pointer;font-size:14px;color:#244b54;font-weight:800;list-style:none}
+.clinic-evidence summary:after{content:'+';float:right;font-size:19px;font-weight:400;color:#099a90}
+.clinic-evidence details[open] summary:after{content:'−'}
+.clinic-evidence p{font-size:12px;color:#627b85;line-height:1.7}
+.clinic-evidence small{color:#178780;font-size:10px;letter-spacing:.06em}
+.clinic-tooltip{position:fixed;pointer-events:none;z-index:200;max-width:235px;padding:12px 14px;background:#173e49f5;color:#e7fffb;box-shadow:0 10px 30px #10354340;border-radius:12px;font-size:11px;line-height:1.6;transform:translate(12px,-50%)}
+.clinic-tooltip strong{font-size:13px}.clinic-tooltip span{color:#a4dad1}
+.clinic-reveal {transition:opacity .7s,transform .7s;opacity:0;transform:translateY(19px)}.clinic-reveal.in-view{opacity:1;transform:none}
+.clinic-crew-progress{height:4px;background:#e7f2f2;border-radius:6px;overflow:hidden;margin:11px 0 13px}.clinic-crew-progress i{display:block;height:100%;width:0;background:linear-gradient(90deg,#0d928b,#76b8b7);transition:width .4s}
+/* Accessibility, small screens, motion preferences */
+@media(max-width:1050px){.launch-stage{grid-template-columns:1fr;min-height:680px;align-content:center;padding:35px;background-position:58% center}.launch-monitor{justify-self:start;width:min(520px,100%);transform:none}.launch-monitor:hover{transform:translateY(-3px)}.launch-copy{max-width:650px}.launch-copy h1{font-size:75px}.launch-stage::before{background:linear-gradient(90deg,#f4fbf9ee,#f4fbf9bd 55%,#eef8f7a1)}.clinic-feature-rail{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:720px){.shell{padding:0 15px}.topbar{height:auto;padding:18px 0}.topmeta{display:none}.nav{top:0;flex-wrap:nowrap;justify-content:flex-start;overflow-x:auto;margin-top:8px;scrollbar-width:thin}.tab{white-space:nowrap;padding:10px 13px}.launch-stage{margin:10px 0 26px;min-height:650px;padding:25px;border-radius:21px;gap:12px;background-position:56% center}.launch-copy h1{font-size:clamp(55px,13vw,82px)}.launch-copy h2{font-size:24px}.launch-copy p{font-size:13px}.launch-kicker{font-size:9px}.launch-monitor{padding:16px;border-radius:18px}.monitor-grid{gap:5px}.monitor-grid div{padding:7px}.launch-scroll{display:none}.clinic-feature-rail{gap:8px;margin:0 0 22px}.clinic-feature{padding:10px;gap:8px}.clinic-feature .glyph{font-size:17px;width:30px;height:30px}.clinic-feature b{font-size:10px}.clinic-feature small{font-size:9px}.hero{grid-template-columns:1fr;padding:25px 0}.hero-art{height:190px}.stats{grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}.metric{padding:15px}.card{padding:18px}.two-col{grid-template-columns:1fr}.single{gap:8px}.barrow{grid-template-columns:110px 1fr 73px;gap:7px;font-size:10px}.checkgrid{grid-template-columns:1fr}.journey-steps{grid-template-columns:repeat(2,1fr)}.clinic-compare{padding:17px}.compare-stage{height:190px}.clinic-evidence{grid-template-columns:1fr}.clinic-astronaut{grid-template-columns:1fr}.clinic-astronaut .portrait{min-height:220px;background-position:center 43%}.clinic-astronaut .portrait:after{background:linear-gradient(0deg,#eaf4f5,transparent 40%)}.clinic-astronaut .story{padding:23px}.headerline{display:block}.headerline p{margin-top:10px}.orbital-sphere.a{width:125px;right:-78px}.orbital-sphere.b{width:95px;left:-55px}}
+@media(max-width:380px){.launch-ctas button{width:100%}.launch-stage{min-height:745px}.launch-monitor-title{font-size:9px}.monitor-head strong{font-size:20px}}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto!important}*,*::before,*::after{animation:none!important;transition-duration:0s!important;scroll-behavior:auto!important}.clinic-reveal{opacity:1!important;transform:none!important}.orbital-sphere{will-change:auto}}
+/* Keep atmospheric objects above the page background but behind the interface. */
+.orbital-layer{z-index:0}.shell{position:relative;z-index:1}
+
+.launch-source{position:absolute;z-index:4;bottom:18px;right:20px;background:#f9ffffd9;border-radius:8px;padding:5px 10px;font-size:10px;color:#305b65}
+.launch-source a{color:#087974;font-weight:700}
+.clinic-astronaut .source-credit{font-size:11px;margin-top:10px;color:#617d85}
+@media(max-width:720px){.launch-source{right:10px;bottom:10px;font-size:9px;max-width:55%;line-height:1.2}}
