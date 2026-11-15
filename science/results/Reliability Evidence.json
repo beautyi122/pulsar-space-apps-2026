@@ -1,7 +1,6 @@
 {
   "status": "RETROSPECTIVE_PARTICIPANT_HELD_OUT_DEVELOPMENT_ONLY",
   "date": "2026-11-15",
-  "gate4_met": false,
   "reference_access_in_reliability_training_only": true,
   "original_phase31_data_reused_not_independent": true,
   "method": "LOPO outer; separate inner LOPO on training participants to set a predicted-risk 35%-eligible-coverage quantile; ExtraTrees risk model trained only on outer training participants; no ECG feature",
