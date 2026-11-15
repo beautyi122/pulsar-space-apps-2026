@@ -1,0 +1,717 @@
+{
+  "status": "PHASE34_RETROSPECTIVE_DEVELOPMENT_SCORING_NOT_UNTOUCHED_VALIDATION",
+  "gate4_met": false,
+  "phase35_independent_holdout_used": false,
+  "ecg_access_is_in_separate_scoring_stage_only": true,
+  "sensor_pilot_sha256": "13ab4e6e78219a7d6f9d15a1dfeff7b2cf5d1194db072580ef1e7a1fd838beb1",
+  "phase31_evidence_zip_sha256": "aff9dfdb436e362c92570f906554b2153d068c22c67ad70bae129247b4cb7912",
+  "candidate_comparisons": {
+    "phase31_frozen_accepted": {
+      "overall": {
+        "denominator_ecg_eligible": 332,
+        "accepted": 54,
+        "coverage": 0.16265060240963855,
+        "conditional_mae_bpm": 21.072638148148148,
+        "conditional_median_ae_bpm": 4.881,
+        "serious_errors_ge_15_bpm": 16,
+        "serious_fraction_accepted": 0.2962962962962963,
+        "within_5_bpm": 29,
+        "within_10_bpm": 35
+      },
+      "by_activity": {
+        "high_resistance_bike": {
+          "denominator_ecg_eligible": 63,
+          "accepted": 15,
+          "coverage": 0.23809523809523808,
+          "conditional_mae_bpm": 2.8178739999999984,
+          "conditional_median_ae_bpm": 1.6666699999999963,
+          "serious_errors_ge_15_bpm": 0,
+          "serious_fraction_accepted": 0.0,
+          "within_5_bpm": 11,
+          "within_10_bpm": 15
+        },
+        "low_resistance_bike": {
+          "denominator_ecg_eligible": 87,
+          "accepted": 15,
+          "coverage": 0.1724137931034483,
+          "conditional_mae_bpm": 4.2451726666666705,
+          "conditional_median_ae_bpm": 2.571390000000008,
+          "serious_errors_ge_15_bpm": 0,
+          "serious_fraction_accepted": 0.0,
+          "within_5_bpm": 11,
+          "within_10_bpm": 12
+        },
+        "run": {
+          "denominator_ecg_eligible": 73,
+          "accepted": 2,
+          "coverage": 0.0273972602739726,
+          "conditional_mae_bpm": 53.037530000000004,
+          "conditional_median_ae_bpm": 88.21387,
+          "serious_errors_ge_15_bpm": 2,
+          "serious_fraction_accepted": 1.0,
+          "within_5_bpm": 0,
+          "within_10_bpm": 0
+        },
+        "walk": {
+          "denominator_ecg_eligible": 109,
+          "accepted": 22,
+          "coverage": 0.2018348623853211,
+          "conditional_mae_bpm": 42.08644090909091,
+          "conditional_median_ae_bpm": 42.29428,
+          "serious_errors_ge_15_bpm": 14,
+          "serious_fraction_accepted": 0.6363636363636364,
+          "within_5_bpm": 7,
+          "within_10_bpm": 8
+        }
+      },
+      "by_subject": {
+        "s1": {
+          "denominator_ecg_eligible": 86,
+          "accepted": 15,
+          "coverage": 0.1744186046511628,
+          "conditional_mae_bpm": 2.3632973333333327,
+          "conditional_median_ae_bpm": 1.2331300000000027,
+          "serious_errors_ge_15_bpm": 0,
+          "serious_fraction_accepted": 0.0,
+          "within_5_bpm": 12,
+          "within_10_bpm": 15
+        },
+        "s2": {
+          "denominator_ecg_eligible": 56,
+          "accepted": 1,
+          "coverage": 0.017857142857142856,
+          "conditional_mae_bpm": 42.29428,
+          "conditional_median_ae_bpm": 42.29428,
+          "serious_errors_ge_15_bpm": 1,
+          "serious_fraction_accepted": 1.0,
+          "within_5_bpm": 0,
+          "within_10_bpm": 0
+        },
+        "s3": {
+          "denominator_ecg_eligible": 57,
+          "accepted": 20,
+          "coverage": 0.3508771929824561,
+          "conditional_mae_bpm": 40.550258,
+          "conditional_median_ae_bpm": 74.39623,
+          "serious_errors_ge_15_bpm": 10,
+          "serious_fraction_accepted": 0.5,
+          "within_5_bpm": 8,
+          "within_10_bpm": 10
+        },
+        "s4": {
+          "denominator_ecg_eligible": 14,
+          "accepted": 0,
+          "coverage": 0.0,
+          "conditional_mae_bpm": null,
+          "conditional_median_ae_bpm": null,
+          "serious_errors_ge_15_bpm": 0,
+          "serious_fraction_accepted": null,
+          "within_5_bpm": 0,
+          "within_10_bpm": 0
+        },
+        "s5": {
+          "denominator_ecg_eligible": 29,
+          "accepted": 0,
+          "coverage": 0.0,
+          "conditional_mae_bpm": null,
+          "conditional_median_ae_bpm": null,
+          "serious_errors_ge_15_bpm": 0,
+          "serious_fraction_accepted": null,
+          "within_5_bpm": 0,
+          "within_10_bpm": 0
+        },
+        "s6": {
+          "denominator_ecg_eligible": 45,
+          "accepted": 6,
+          "coverage": 0.13333333333333333,
+          "conditional_mae_bpm": 9.742916666666673,
+          "conditional_median_ae_bpm": 11.926870000000008,
+          "serious_errors_ge_15_bpm": 1,
+          "serious_fraction_accepted": 0.16666666666666666,
+          "within_5_bpm": 2,
+          "within_10_bpm": 2
+        },
+        "s8": {
+          "denominator_ecg_eligible": 34,
+          "accepted": 4,
+          "coverage": 0.11764705882352941,
+          "conditional_mae_bpm": 40.61087500000001,
+          "conditional_median_ae_bpm": 28.888890000000004,
+          "serious_errors_ge_15_bpm": 4,
+          "serious_fraction_accepted": 1.0,
+          "within_5_bpm": 0,
+          "within_10_bpm": 0
+        },
+        "s9": {
+          "denominator_ecg_eligible": 11,
+          "accepted": 8,
+          "coverage": 0.7272727272727273,
+          "conditional_mae_bpm": 3.53407,
+          "conditional_median_ae_bpm": 3.0872499999999974,
+          "serious_errors_ge_15_bpm": 0,
+          "serious_fraction_accepted": 0.0,
+          "within_5_bpm": 7,
+          "within_10_bpm": 8
+        }
+      }
+    },
+    "raw_ppg_top_peak_unfiltered": {
+      "overall": {
+        "denominator_ecg_eligible": 332,
+        "accepted": 329,
+        "coverage": 0.9909638554216867,
+        "conditional_mae_bpm": 36.35151176291794,
+        "conditional_median_ae_bpm": 18.749919999999996,
+        "serious_errors_ge_15_bpm": 189,
+        "serious_fraction_accepted": 0.574468085106383,
+        "within_5_bpm": 97,
+        "within_10_bpm": 121
+      },
+      "by_activity": {
+        "high_resistance_bike": {
+          "denominator_ecg_eligible": 63,
+          "accepted": 63,
+          "coverage": 1.0,
+          "conditional_mae_bpm": 23.8281673015873,
+          "conditional_median_ae_bpm": 2.2190300000000036,
+          "serious_errors_ge_15_bpm": 27,
+          "serious_fraction_accepted": 0.42857142857142855,
+          "within_5_bpm": 34,
+          "within_10_bpm": 36
+        },
+        "low_resistance_bike": {
+          "denominator_ecg_eligible": 87,
+          "accepted": 85,
+          "coverage": 0.9770114942528736,
+          "conditional_mae_bpm": 18.804826941176472,
+          "conditional_median_ae_bpm": 8.463850000000008,
+          "serious_errors_ge_15_bpm": 36,
+          "serious_fraction_accepted": 0.4235294117647059,
+          "within_5_bpm": 35,
+          "within_10_bpm": 45
+        },
+        "run": {
+          "denominator_ecg_eligible": 73,
+          "accepted": 73,
+          "coverage": 1.0,
+          "conditional_mae_bpm": 51.96399945205479,
+          "conditional_median_ae_bpm": 64.75999999999999,
+          "serious_errors_ge_15_bpm": 58,
+          "serious_fraction_accepted": 0.7945205479452054,
+          "within_5_bpm": 5,
+          "within_10_bpm": 6
+        },
+        "walk": {
+          "denominator_ecg_eligible": 109,
+          "accepted": 108,
+          "coverage": 0.9908256880733946,
+          "conditional_mae_bpm": 46.91380166666667,
+          "conditional_median_ae_bpm": 20.085449999999994,
+          "serious_errors_ge_15_bpm": 68,
+          "serious_fraction_accepted": 0.6296296296296297,
+          "within_5_bpm": 23,
+          "within_10_bpm": 34
+        }
+      },
+      "by_subject": {
+        "s1": {
+          "denominator_ecg_eligible": 86,
+          "accepted": 86,
+          "coverage": 1.0,
+          "conditional_mae_bpm": 20.09531104651163,
+          "conditional_median_ae_bpm": 16.806270000000005,
+          "serious_errors_ge_15_bpm": 50,
+          "serious_fraction_accepted": 0.5813953488372093,
+          "within_5_bpm": 25,
+          "within_10_bpm": 30
+        },
+        "s2": {
+          "denominator_ecg_eligible": 56,
+          "accepted": 56,
+          "coverage": 1.0,
+          "conditional_mae_bpm": 13.823684464285716,
+          "conditional_median_ae_bpm": 1.4342900000000043,
+          "serious_errors_ge_15_bpm": 13,
+          "serious_fraction_accepted": 0.23214285714285715,
+          "within_5_bpm": 42,
+          "within_10_bpm": 43
+        },
+        "s3": {
+          "denominator_ecg_eligible": 57,
+          "accepted": 57,
+          "coverage": 1.0,
+          "conditional_mae_bpm": 45.02217140350877,
+          "conditional_median_ae_bpm": 59.344809999999995,
+          "serious_errors_ge_15_bpm": 36,
+          "serious_fraction_accepted": 0.631578947368421,
+          "within_5_bpm": 12,
+          "within_10_bpm": 13
+        },
+        "s4": {
+          "denominator_ecg_eligible": 14,
+          "accepted": 14,
+          "coverage": 1.0,
+          "conditional_mae_bpm": 63.501598571428566,
+          "conditional_median_ae_bpm": 86.95285999999999,
+          "serious_errors_ge_15_bpm": 10,
+          "serious_fraction_accepted": 0.7142857142857143,
+          "within_5_bpm": 4,
+          "within_10_bpm": 4
+        },
+        "s5": {
+          "denominator_ecg_eligible": 29,
+          "accepted": 28,
+          "coverage": 0.9655172413793104,
+          "conditional_mae_bpm": 52.782528571428564,
+          "conditional_median_ae_bpm": 64.73044,
+          "serious_errors_ge_15_bpm": 24,
+          "serious_fraction_accepted": 0.8571428571428571,
+          "within_5_bpm": 1,
+          "within_10_bpm": 3
+        },
+        "s6": {
+          "denominator_ecg_eligible": 45,
+          "accepted": 44,
+          "coverage": 0.9777777777777777,
+          "conditional_mae_bpm": 23.9839575,
+          "conditional_median_ae_bpm": 15.938149999999993,
+          "serious_errors_ge_15_bpm": 22,
+          "serious_fraction_accepted": 0.5,
+          "within_5_bpm": 6,
+          "within_10_bpm": 18
+        },
+        "s8": {
+          "denominator_ecg_eligible": 34,
+          "accepted": 34,
+          "coverage": 1.0,
+          "conditional_mae_bpm": 100.86371088235295,
+          "conditional_median_ae_bpm": 109.29317,
+          "serious_errors_ge_15_bpm": 34,
+          "serious_fraction_accepted": 1.0,
+          "within_5_bpm": 0,
+          "within_10_bpm": 0
+        },
+        "s9": {
+          "denominator_ecg_eligible": 11,
+          "accepted": 10,
+          "coverage": 0.9090909090909091,
+          "conditional_mae_bpm": 3.9467040000000013,
+          "conditional_median_ae_bpm": 4.177250000000001,
+          "serious_errors_ge_15_bpm": 0,
+          "serious_fraction_accepted": 0.0,
+          "within_5_bpm": 7,
+          "within_10_bpm": 10
+        }
+      }
+    },
+    "motion_residual_top_peak_unfiltered": {
+      "overall": {
+        "denominator_ecg_eligible": 332,
+        "accepted": 329,
+        "coverage": 0.9909638554216867,
+        "conditional_mae_bpm": 21.68552848024316,
+        "conditional_median_ae_bpm": 5.587249999999997,
+        "serious_errors_ge_15_bpm": 126,
+        "serious_fraction_accepted": 0.3829787234042553,
+        "within_5_bpm": 161,
+        "within_10_bpm": 188
+      },
+      "by_activity": {
+        "high_resistance_bike": {
+          "denominator_ecg_eligible": 63,
+          "accepted": 63,
+          "coverage": 1.0,
+          "conditional_mae_bpm": 6.907691111111111,
+          "conditional_median_ae_bpm": 0.8829700000000003,
+          "serious_errors_ge_15_bpm": 6,
+          "serious_fraction_accepted": 0.09523809523809523,
+          "within_5_bpm": 50,
+          "within_10_bpm": 56
+        },
+        "low_resistance_bike": {
+          "denominator_ecg_eligible": 87,
+          "accepted": 85,
+          "coverage": 0.9770114942528736,
+          "conditional_mae_bpm": 14.050396352941176,
+          "conditional_median_ae_bpm": 4.728260000000006,
+          "serious_errors_ge_15_bpm": 25,
+          "serious_fraction_accepted": 0.29411764705882354,
+          "within_5_bpm": 44,
+          "within_10_bpm": 53
+        },
+        "run": {
+          "denominator_ecg_eligible": 73,
+          "accepted": 73,
+          "coverage": 1.0,
+          "conditional_mae_bpm": 40.045123561643834,
+          "conditional_median_ae_bpm": 28.855649999999997,
+          "serious_errors_ge_15_bpm": 51,
+          "serious_fraction_accepted": 0.6986301369863014,
+          "within_5_bpm": 14,
+          "within_10_bpm": 19
+        },
+        "walk": {
+          "denominator_ecg_eligible": 109,
+          "accepted": 108,
+          "coverage": 0.9908256880733946,
+          "conditional_mae_bpm": 23.905339074074075,
+          "conditional_median_ae_bpm": 6.332329999999999,
+          "serious_errors_ge_15_bpm": 44,
+          "serious_fraction_accepted": 0.4074074074074074,
+          "within_5_bpm": 53,
+          "within_10_bpm": 60
+        }
+      },
+      "by_subject": {
+        "s1": {
+          "denominator_ecg_eligible": 86,
+          "accepted": 86,
+          "coverage": 1.0,
+          "conditional_mae_bpm": 8.75658476744186,
+          "conditional_median_ae_bpm": 1.4218800000000016,
+          "serious_errors_ge_15_bpm": 19,
+          "serious_fraction_accepted": 0.22093023255813954,
+          "within_5_bpm": 55,
+          "within_10_bpm": 65
+        },
+        "s2": {
+          "denominator_ecg_eligible": 56,
+          "accepted": 56,
+          "coverage": 1.0,
+          "conditional_mae_bpm": 20.178116964285717,
+          "conditional_median_ae_bpm": 1.4342900000000043,
+          "serious_errors_ge_15_bpm": 15,
+          "serious_fraction_accepted": 0.26785714285714285,
+          "within_5_bpm": 37,
+          "within_10_bpm": 39
+        },
+        "s3": {
+          "denominator_ecg_eligible": 57,
+          "accepted": 57,
+          "coverage": 1.0,
+          "conditional_mae_bpm": 19.352001228070172,
+          "conditional_median_ae_bpm": 3.076669999999993,
+          "serious_errors_ge_15_bpm": 22,
+          "serious_fraction_accepted": 0.38596491228070173,
+          "within_5_bpm": 30,
+          "within_10_bpm": 31
+        },
+        "s4": {
+          "denominator_ecg_eligible": 14,
+          "accepted": 14,
+          "coverage": 1.0,
+          "conditional_mae_bpm": 30.62548142857143,
+          "conditional_median_ae_bpm": 10.79464999999999,
+          "serious_errors_ge_15_bpm": 6,
+          "serious_fraction_accepted": 0.42857142857142855,
+          "within_5_bpm": 4,
+          "within_10_bpm": 7
+        },
+        "s5": {
+          "denominator_ecg_eligible": 29,
+          "accepted": 28,
+          "coverage": 0.9655172413793104,
+          "conditional_mae_bpm": 38.52312571428571,
+          "conditional_median_ae_bpm": 39.75215,
+          "serious_errors_ge_15_bpm": 21,
+          "serious_fraction_accepted": 0.75,
+          "within_5_bpm": 2,
+          "within_10_bpm": 3
+        },
+        "s6": {
+          "denominator_ecg_eligible": 45,
+          "accepted": 44,
+          "coverage": 0.9777777777777777,
+          "conditional_mae_bpm": 23.810723409090908,
+          "conditional_median_ae_bpm": 16.8544,
+          "serious_errors_ge_15_bpm": 23,
+          "serious_fraction_accepted": 0.5227272727272727,
+          "within_5_bpm": 11,
+          "within_10_bpm": 19
+        },
+        "s8": {
+          "denominator_ecg_eligible": 34,
+          "accepted": 34,
+          "coverage": 1.0,
+          "conditional_mae_bpm": 42.51150617647059,
+          "conditional_median_ae_bpm": 21.54666999999999,
+          "serious_errors_ge_15_bpm": 18,
+          "serious_fraction_accepted": 0.5294117647058824,
+          "within_5_bpm": 14,
+          "within_10_bpm": 16
+        },
+        "s9": {
+          "denominator_ecg_eligible": 11,
+          "accepted": 10,
+          "coverage": 0.9090909090909091,
+          "conditional_mae_bpm": 14.796666000000005,
+          "conditional_median_ae_bpm": 0.7462200000000081,
+          "serious_errors_ge_15_bpm": 2,
+          "serious_fraction_accepted": 0.2,
+          "within_5_bpm": 8,
+          "within_10_bpm": 8
+        }
+      }
+    },
+    "frozen_phase13_candidate_when_available": {
+      "overall": {
+        "denominator_ecg_eligible": 332,
+        "accepted": 46,
+        "coverage": 0.13855421686746988,
+        "conditional_mae_bpm": 23.010545,
+        "conditional_median_ae_bpm": 16.56407,
+        "serious_errors_ge_15_bpm": 25,
+        "serious_fraction_accepted": 0.5434782608695652,
+        "within_5_bpm": 9,
+        "within_10_bpm": 13
+      },
+      "by_activity": {
+        "high_resistance_bike": {
+          "denominator_ecg_eligible": 63,
+          "accepted": 0,
+          "coverage": 0.0,
+          "conditional_mae_bpm": null,
+          "conditional_median_ae_bpm": null,
+          "serious_errors_ge_15_bpm": 0,
+          "serious_fraction_accepted": null,
+          "within_5_bpm": 0,
+          "within_10_bpm": 0
+        },
+        "low_resistance_bike": {
+          "denominator_ecg_eligible": 87,
+          "accepted": 1,
+          "coverage": 0.011494252873563218,
+          "conditional_mae_bpm": 2.5712900000000047,
+          "conditional_median_ae_bpm": 2.5712900000000047,
+          "serious_errors_ge_15_bpm": 0,
+          "serious_fraction_accepted": 0.0,
+          "within_5_bpm": 1,
+          "within_10_bpm": 1
+        },
+        "run": {
+          "denominator_ecg_eligible": 73,
+          "accepted": 7,
+          "coverage": 0.0958904109589041,
+          "conditional_mae_bpm": 79.01402142857144,
+          "conditional_median_ae_bpm": 90.36965,
+          "serious_errors_ge_15_bpm": 7,
+          "serious_fraction_accepted": 1.0,
+          "within_5_bpm": 0,
+          "within_10_bpm": 0
+        },
+        "walk": {
+          "denominator_ecg_eligible": 109,
+          "accepted": 38,
+          "coverage": 0.3486238532110092,
+          "conditional_mae_bpm": 13.231990263157897,
+          "conditional_median_ae_bpm": 13.682630000000003,
+          "serious_errors_ge_15_bpm": 18,
+          "serious_fraction_accepted": 0.47368421052631576,
+          "within_5_bpm": 8,
+          "within_10_bpm": 12
+        }
+      },
+      "by_subject": {
+        "s1": {
+          "denominator_ecg_eligible": 86,
+          "accepted": 5,
+          "coverage": 0.05813953488372093,
+          "conditional_mae_bpm": 18.19049,
+          "conditional_median_ae_bpm": 18.73626,
+          "serious_errors_ge_15_bpm": 4,
+          "serious_fraction_accepted": 0.8,
+          "within_5_bpm": 0,
+          "within_10_bpm": 0
+        },
+        "s2": {
+          "denominator_ecg_eligible": 56,
+          "accepted": 0,
+          "coverage": 0.0,
+          "conditional_mae_bpm": null,
+          "conditional_median_ae_bpm": null,
+          "serious_errors_ge_15_bpm": 0,
+          "serious_fraction_accepted": null,
+          "within_5_bpm": 0,
+          "within_10_bpm": 0
+        },
+        "s3": {
+          "denominator_ecg_eligible": 57,
+          "accepted": 13,
+          "coverage": 0.22807017543859648,
+          "conditional_mae_bpm": 8.766001538461541,
+          "conditional_median_ae_bpm": 10.22654,
+          "serious_errors_ge_15_bpm": 0,
+          "serious_fraction_accepted": 0.0,
+          "within_5_bpm": 2,
+          "within_10_bpm": 6
+        },
+        "s4": {
+          "denominator_ecg_eligible": 14,
+          "accepted": 6,
+          "coverage": 0.42857142857142855,
+          "conditional_mae_bpm": 89.20616,
+          "conditional_median_ae_bpm": 90.36965,
+          "serious_errors_ge_15_bpm": 6,
+          "serious_fraction_accepted": 1.0,
+          "within_5_bpm": 0,
+          "within_10_bpm": 0
+        },
+        "s5": {
+          "denominator_ecg_eligible": 29,
+          "accepted": 0,
+          "coverage": 0.0,
+          "conditional_mae_bpm": null,
+          "conditional_median_ae_bpm": null,
+          "serious_errors_ge_15_bpm": 0,
+          "serious_fraction_accepted": null,
+          "within_5_bpm": 0,
+          "within_10_bpm": 0
+        },
+        "s6": {
+          "denominator_ecg_eligible": 45,
+          "accepted": 1,
+          "coverage": 0.022222222222222223,
+          "conditional_mae_bpm": 17.861190000000008,
+          "conditional_median_ae_bpm": 17.861190000000008,
+          "serious_errors_ge_15_bpm": 1,
+          "serious_fraction_accepted": 1.0,
+          "within_5_bpm": 0,
+          "within_10_bpm": 0
+        },
+        "s8": {
+          "denominator_ecg_eligible": 34,
+          "accepted": 14,
+          "coverage": 0.4117647058823529,
+          "conditional_mae_bpm": 20.060992142857145,
+          "conditional_median_ae_bpm": 20.08094,
+          "serious_errors_ge_15_bpm": 14,
+          "serious_fraction_accepted": 1.0,
+          "within_5_bpm": 0,
+          "within_10_bpm": 0
+        },
+        "s9": {
+          "denominator_ecg_eligible": 11,
+          "accepted": 7,
+          "coverage": 0.6363636363636364,
+          "conditional_mae_bpm": 2.803222857142856,
+          "conditional_median_ae_bpm": 3.0872499999999974,
+          "serious_errors_ge_15_bpm": 0,
+          "serious_fraction_accepted": 0.0,
+          "within_5_bpm": 7,
+          "within_10_bpm": 7
+        }
+      }
+    }
+  },
+  "paired_raw_vs_residual": {
+    "both_available": 329,
+    "residual_better": 179,
+    "residual_worse": 96,
+    "ties": 54,
+    "by_record": {
+      "s1_high_resistance_bike": {
+        "n": 29,
+        "improved": 13,
+        "worsened": 4
+      },
+      "s1_low_resistance_bike": {
+        "n": 28,
+        "improved": 11,
+        "worsened": 9
+      },
+      "s1_walk": {
+        "n": 29,
+        "improved": 19,
+        "worsened": 8
+      },
+      "s2_high_resistance_bike": {
+        "n": 20,
+        "improved": 8,
+        "worsened": 4
+      },
+      "s2_low_resistance_bike": {
+        "n": 17,
+        "improved": 4,
+        "worsened": 2
+      },
+      "s2_walk": {
+        "n": 19,
+        "improved": 4,
+        "worsened": 15
+      },
+      "s3_high_resistance_bike": {
+        "n": 14,
+        "improved": 11,
+        "worsened": 2
+      },
+      "s3_low_resistance_bike": {
+        "n": 14,
+        "improved": 6,
+        "worsened": 3
+      },
+      "s3_run": {
+        "n": 15,
+        "improved": 9,
+        "worsened": 6
+      },
+      "s3_walk": {
+        "n": 14,
+        "improved": 13,
+        "worsened": 1
+      },
+      "s4_run": {
+        "n": 14,
+        "improved": 10,
+        "worsened": 4
+      },
+      "s5_low_resistance_bike": {
+        "n": 13,
+        "improved": 7,
+        "worsened": 6
+      },
+      "s5_run": {
+        "n": 15,
+        "improved": 12,
+        "worsened": 3
+      },
+      "s6_low_resistance_bike": {
+        "n": 13,
+        "improved": 4,
+        "worsened": 6
+      },
+      "s6_run": {
+        "n": 15,
+        "improved": 9,
+        "worsened": 6
+      },
+      "s6_walk": {
+        "n": 16,
+        "improved": 6,
+        "worsened": 9
+      },
+      "s8_run": {
+        "n": 14,
+        "improved": 6,
+        "worsened": 5
+      },
+      "s8_walk": {
+        "n": 20,
+        "improved": 19,
+        "worsened": 1
+      },
+      "s9_walk": {
+        "n": 10,
+        "improved": 8,
+        "worsened": 2
+      }
+    }
+  },
+  "reference_definition": "Phase31 saved ECG BPM; errors >=15 BPM serious; historical source has 332 eligible windows",
+  "limitations": [
+    "The same eight subjects were already inspected in Phase31; this is development analysis only.",
+    "No cutoff was tuned or accepted here; raw/residual columns are intentionally unfiltered candidates.",
+    "A 100% available raw/residual candidate stream is NOT 100% reliable monitoring coverage.",
+    "Error and acceptance must be jointly optimized on development participants, then frozen.",
+    "No claim of clinical validity or passing Gate4 until an untouched holdout succeeds."
+  ]
+}

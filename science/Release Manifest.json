@@ -1,0 +1,184 @@
+{
+  "project": "Pulsar",
+  "team": "Stella Nova",
+  "format": "scientific evidence SHA-256 inventory",
+  "source_partition": "previously examined development recordings",
+  "participants_in_development": 8,
+  "human_recordings": 19,
+  "eligible_windows": 332,
+  "independent_external_validation": false,
+  "method": "Retrospective outer leave-one-participant-out, inner train-only threshold selection",
+  "manifest_self_excluded": true,
+  "files": [
+    {
+      "path": "Attributions.md",
+      "size_bytes": 3081,
+      "sha256": "80da4705ec7dbbb91567b3be7a734d9d2dea95240389a3e8dc9340b92221d08d"
+    },
+    {
+      "path": "Launch.py",
+      "size_bytes": 2745,
+      "sha256": "72ec96f71a6db4fd9ddaa037d4bbbe6fc4489f05c43a68350afce19620031ecc"
+    },
+    {
+      "path": "METHODS.md",
+      "size_bytes": 6681,
+      "sha256": "fce3b25f51c7a5ea18aab86b66530b6ac8c4d7728952277a8c9bf75d6ddd4a89"
+    },
+    {
+      "path": "NASA RESOURCES.md",
+      "size_bytes": 3483,
+      "sha256": "27be4937fd80913afdac097a6fc15506996bad0bc711e58c6518bcc3e3e3c0da"
+    },
+    {
+      "path": "README.md",
+      "size_bytes": 2607,
+      "sha256": "81b59aa2b3cf6ed75b14a904c7a8577cb84d8a00278b22adf4ff9ac720a25e4e"
+    },
+    {
+      "path": "REPRODUCE.md",
+      "size_bytes": 3026,
+      "sha256": "71e574986523485c8d78559b08841e2cdfd05a92fd96ae490ee8bef68ad2195b"
+    },
+    {
+      "path": "RESULTS.md",
+      "size_bytes": 2759,
+      "sha256": "2c330b9bc775275afcb98f1c7aed0e45931673c1f68ed73694aa04e6ce888cfc"
+    },
+    {
+      "path": "Verification.md",
+      "size_bytes": 2012,
+      "sha256": "8d4e35873ad7c86a0fed4aa2a5a5d1e198219a02f4caca638c2f7de4132db91d"
+    },
+    {
+      "path": "app/.nojekyll",
+      "size_bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "app/README.md",
+      "size_bytes": 741,
+      "sha256": "3f979304aa8e582fb96e36dd2ebe2871de191619256c3c143afa011c411a26a0"
+    },
+    {
+      "path": "app/Synthetic PPG.csv",
+      "size_bytes": 274009,
+      "sha256": "040e7e8cd0a9530298cb27de6ec1194e9a8329b1d7354063fe3563a99827565b"
+    },
+    {
+      "path": "app/app.js",
+      "size_bytes": 11926,
+      "sha256": "aa6ae97b64e7b21bbf1dbd0a09f71589bab1e5d96a0457c71df498aa76145901"
+    },
+    {
+      "path": "app/browser-signal.js",
+      "size_bytes": 7776,
+      "sha256": "1d46bc3c094f807138d1234caa924bc881a39569a41404064d175934e10685f4"
+    },
+    {
+      "path": "app/data.js",
+      "size_bytes": 62850,
+      "sha256": "2f38adf5162c17660582cc9013fbc6c68c2983fdf9dc9ec5721860c0dba604b9"
+    },
+    {
+      "path": "app/index.html",
+      "size_bytes": 19954,
+      "sha256": "8a4971f77d8cb387a48ae572222d1cea2bb0230e5ac389ec75e4560c432029bb"
+    },
+    {
+      "path": "app/style.css",
+      "size_bytes": 9164,
+      "sha256": "f25c02a7beea2eb187ce9df115a61a9374c6f9d7b9b582076772e4ced49ea735"
+    },
+    {
+      "path": "input/Phase 31 Evidence.zip",
+      "size_bytes": 20204,
+      "sha256": "aff9dfdb436e362c92570f906554b2153d068c22c67ad70bae129247b4cb7912"
+    },
+    {
+      "path": "input/Phase 32 Raw Signal Probe.json",
+      "size_bytes": 625785,
+      "sha256": "0e85ad2bee6775a02de6c9d7a84dcaa850225d738ff6f5b80120a99a81a48367"
+    },
+    {
+      "path": "input/Phase 34 Development Comparison.json",
+      "size_bytes": 23780,
+      "sha256": "ad18f6a5be856801d4ccca3d90ef837aca55302a43d37e6c027b9c6dd283bbff"
+    },
+    {
+      "path": "input/Phase 34 Sensor Pilot.json",
+      "size_bytes": 599248,
+      "sha256": "13ab4e6e78219a7d6f9d15a1dfeff7b2cf5d1194db072580ef1e7a1fd838beb1"
+    },
+    {
+      "path": "requirements.txt",
+      "size_bytes": 64,
+      "sha256": "1b1efed308bd6eb7d3a05bdc173c6070bfdfbbf23f2e8b97c7dbbe3194f79f1e"
+    },
+    {
+      "path": "research/AnalyzeCSV.py",
+      "size_bytes": 5493,
+      "sha256": "f4670cad1937cbb63486efe8394238e95bf9dba24e0dea8cd200bd79431907a7"
+    },
+    {
+      "path": "research/Phase32RawProbe.py",
+      "size_bytes": 8106,
+      "sha256": "f8af18e1ac45c9fb365ffcd8b5a2a9efb793ffa2ed8ada7245c2b8224793ac9c"
+    },
+    {
+      "path": "research/Phase33SignalExperiment.py",
+      "size_bytes": 6588,
+      "sha256": "aaff029b366b6992ede8d19fcd201830d4a5cb80f55400056b4a5c0f8431fc88"
+    },
+    {
+      "path": "research/Phase34Run.py",
+      "size_bytes": 10487,
+      "sha256": "f536d88f2bb72d0976051bd355792b4b617cb2d32cf79e441742b6ed7fa64e84"
+    },
+    {
+      "path": "research/Reliability.py",
+      "size_bytes": 14547,
+      "sha256": "6c16f6f0f50641c1e191495e83d820b51d9a79ab6fb924290a300b3082b9d905"
+    },
+    {
+      "path": "results/Final Reliability Model.json",
+      "size_bytes": 1239,
+      "sha256": "c46d01a5405ab14114a757c547b345b26a226294722361001699b80975de0add"
+    },
+    {
+      "path": "results/Reliability Evidence.json",
+      "size_bytes": 170267,
+      "sha256": "610b5dd5ddcef6ce7ccf31a7a3edbe79a07317609bfa8c65f97665189b236c2f"
+    },
+    {
+      "path": "results/Reliability Model.joblib",
+      "size_bytes": 333438,
+      "sha256": "c69b3499c3c6c6195f0793b0f21f52377f9a0e8c38b8141ed82c186481764c3a"
+    },
+    {
+      "path": "results/reliability_run_log.txt",
+      "size_bytes": 1884,
+      "sha256": "18c5efeebd84e3d2d97096a8c3ec24c9f4a64c23407c2ad56655261e1eecbe07"
+    },
+    {
+      "path": "results/tests.txt",
+      "size_bytes": 830,
+      "sha256": "35f83c6bb6f52a354baf948681b674efad05e72c9841d1d12f206aee71931086"
+    },
+    {
+      "path": "tests/test_app.js",
+      "size_bytes": 2896,
+      "sha256": "5b4e0b0e21a8c04ae3d1061542a2148d95cddded2af7ebc3f78a86e3b0e5ede4"
+    },
+    {
+      "path": "tests/test_manifest.py",
+      "size_bytes": 930,
+      "sha256": "7a560942d3675d47a5e3613538fd25757e7048a02745cc1e4f2c78f56b91b1f3"
+    },
+    {
+      "path": "tests/test_release.py",
+      "size_bytes": 4198,
+      "sha256": "c7dc129e0a038020c7e17e73665e12f9875f02714104151376598e691544a294"
+    }
+  ]
+}

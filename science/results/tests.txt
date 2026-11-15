@@ -1,0 +1,11 @@
+test_all_windows_present_no_duplicate_and_correct_outcomes (test_release.ReleaseTests.test_all_windows_present_no_duplicate_and_correct_outcomes) ... ok
+test_nasa_sources_and_safety_bounds (test_release.ReleaseTests.test_nasa_sources_and_safety_bounds) ... ok
+test_reject_malformed_and_missing_samples (test_release.ReleaseTests.test_reject_malformed_and_missing_samples) ... ok
+test_sensor_features_invariant_to_added_ecg_fields (test_release.ReleaseTests.test_sensor_features_invariant_to_added_ecg_fields) ... ok
+test_source_checks_match_original_uploads (test_release.ReleaseTests.test_source_checks_match_original_uploads) ... ok
+test_synthetic_sensor_recovery (test_release.ReleaseTests.test_synthetic_sensor_recovery) ... ok
+
+----------------------------------------------------------------------
+Ran 6 tests in 0.412s
+
+OK

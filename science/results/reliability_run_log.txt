@@ -1,0 +1,78 @@
+{
+  "overall": {
+    "windows": 332,
+    "candidate_windows": 329,
+    "displayed": 125,
+    "display_coverage_all_windows": 0.3765,
+    "display_coverage_eligible": 0.3799,
+    "conditional_mae_bpm": 3.623,
+    "serious_errors_ge15": 8,
+    "serious_rate_displayed": 0.064,
+    "within5": 103,
+    "within10": 115
+  },
+  "by_activity": {
+    "high_resistance_bike": {
+      "windows": 63,
+      "candidate_windows": 63,
+      "displayed": 51,
+      "display_coverage_all_windows": 0.8095,
+      "display_coverage_eligible": 0.8095,
+      "conditional_mae_bpm": 1.494,
+      "serious_errors_ge15": 0,
+      "serious_rate_displayed": 0.0,
+      "within5": 46,
+      "within10": 51
+    },
+    "low_resistance_bike": {
+      "windows": 87,
+      "candidate_windows": 85,
+      "displayed": 44,
+      "display_coverage_all_windows": 0.5057,
+      "display_coverage_eligible": 0.5176,
+      "conditional_mae_bpm": 3.684,
+      "serious_errors_ge15": 1,
+      "serious_rate_displayed": 0.0227,
+      "within5": 36,
+      "within10": 41
+    },
+    "run": {
+      "windows": 73,
+      "candidate_windows": 73,
+      "displayed": 2,
+      "display_coverage_all_windows": 0.0274,
+      "display_coverage_eligible": 0.0274,
+      "conditional_mae_bpm": 16.821,
+      "serious_errors_ge15": 1,
+      "serious_rate_displayed": 0.5,
+      "within5": 0,
+      "within10": 1
+    },
+    "walk": {
+      "windows": 109,
+      "candidate_windows": 108,
+      "displayed": 28,
+      "display_coverage_all_windows": 0.2569,
+      "display_coverage_eligible": 0.2593,
+      "conditional_mae_bpm": 6.463,
+      "serious_errors_ge15": 6,
+      "serious_rate_displayed": 0.2143,
+      "within5": 21,
+      "within10": 22
+    }
+  },
+  "bootstrap": {
+    "coverage": [
+      0.2066,
+      0.4953
+    ],
+    "serious_rate": [
+      0.0269,
+      0.0879
+    ],
+    "mae": [
+      1.9429,
+      5.0655
+    ]
+  }
+}
