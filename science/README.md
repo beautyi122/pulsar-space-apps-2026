@@ -12,7 +12,7 @@
 
 ## Files and evidence
 
-- `research/`: readable Python algorithms and the evaluation procedure. Original frozen source filenames and source hashes are preserved.
+- `research/`: readable Python algorithms and the evaluation procedure. Research source filenames are preserved. Two obsolete internal milestone fields were removed for publication without changing numerical results; the revised file hashes are recorded in the release manifest and explained in Verification.md.
 - `input/`: preserved reference evidence, sensor-only features, a real-sensor pilot and a retrospective development comparison. These inputs are **not** a new independent holdout.
 - `results/`: the exact deterministic out-of-participant development predictions, experiment summary, final research model and output logs.
 - `tests/`: Python and Node.js tests; root `tests/` contains an additional browser-only sensor test.

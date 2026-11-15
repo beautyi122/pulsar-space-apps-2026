@@ -1,6 +1,6 @@
 # Pulsar — evidence integrity and reproducibility
 
-The scientific package preserves the original research algorithms, derived sensor inputs, frozen reliability evaluation, serialized model, and automated tests. The source filenames and JSON keys identify the analytical pipeline and must not be silently rewritten.
+The scientific package preserves the original research algorithms, derived sensor inputs, frozen reliability evaluation, serialized model, and automated tests. The source filenames and JSON keys identify the analytical pipeline. Publication-only metadata edits are documented below.
 
 ## Evidence summary
 
@@ -11,7 +11,7 @@ The scientific package preserves the original research algorithms, derived senso
 
 ## File integrity
 
-The `Release Manifest.json` file records SHA-256 checksums and byte sizes of all deposited files in `science/`, except the manifest itself. Research source code and the original saved experimental inputs and outputs have been retained byte-for-byte from the supplied source archive. The publication documents have been revised for clarity and their hashes regenerated.
+The `Release Manifest.json` file records SHA-256 checksums and byte sizes of all deposited files in `science/`, except the manifest itself. Research source code, quantitative evidence and evaluation decisions are preserved. For publication, obsolete internal milestone-status fields were removed from two JSON files, and a milestone-specific sentence was replaced with a factual validation limitation. These editorial metadata changes do not alter measured results. The manifest records the resulting file sizes and hashes; publication documentation was revised for clarity.
 
 ## Reproduction
 
