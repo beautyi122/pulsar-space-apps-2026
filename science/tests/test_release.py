@@ -67,7 +67,7 @@ class ReleaseTests(unittest.TestCase):
     self.assertIn('NASA OCHMO',self.app)
     self.assertIn('PhysioNet',self.app)
     self.assertIn('not a medical',self.app.lower())
-    self.assertFalse(self.study['gate4_met'])
+    self.assertEqual(self.study['status'],'RETROSPECTIVE_PARTICIPANT_HELD_OUT_DEVELOPMENT_ONLY')
     self.assertTrue(self.study['original_phase31_data_reused_not_independent'])
     self.assertTrue('independent' in ' '.join(self.study['limitations']).lower())
     self.assertEqual(self.study['by_activity']['high_resistance_bike']['serious_errors_ge15'],0)
